@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cyber Guardian Security</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 350px;
+            width: 600px;
+            border: 3px solid #00ff00;
+            background-color: black;
+            background-image: url("Main_background.png");
+            background-size: cover;
+            position: relative;
+            top: 0%;
+            left: 0%;
+            transform: translate(-50, -50);
+        }
+        .Terminal_header {
+            height: 35px;
+            width: 585px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            display: flex;
+            flex-direction: horizontal;
+            background-size: cover;
+            position: absolute;
+            top: 2%;
+            left: 1%;
+            transform: translate(-50, -50);
+        }
+        .Terminal_header button {
+            margin: 2px;
+            padding: 4px;
+            height: 30px;
+            width: 142px;
+            border-radius: 2px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            text-align: center;
+            background-image: url("Buttonbackground.png");
+        }
+        .Terminal_header h1 {
+            margin: 2px;
+            color: #00ff00;
+            font-size: 15px;
+        }
+        .Terminal_header button:hover {
+            transform: scale(1.1);
+        }
+        .Container {
+            height: 290px;
+            width: 582px;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            background-color: black;
+            background-size: cover;
+            background-image: url("Textarea_background.png");
+            position: absolute;
+            top: 14%;
+            left: 1.2%;
+            transform: translate(-50, -50);
+            padding: 10px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .apps-alarms-header {
+            font-size: 20px;
+            color: #00ff00;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .apps-controls, .alarms-controls {
+            margin-bottom: 20px;
+        }
+        .apps-controls input, .alarms-controls input, .alarms-controls select, .apps-controls button, .alarms-controls button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 260px;
+            border-radius: 5px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            color: #00ff00;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .apps-controls button:hover, .alarms-controls button:hover {
+            background-color: #00ff00;
+            color: black;
+        }
+        .alarms-list {
+            color: #00ff00;
+            font-size: 16px;
+        }
+        .alarms-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .alarms-list li {
+            margin: 10px 0;
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 5px;
+        }
+        .alarms-list .time, .alarms-list .label {
+            display: inline-block;
+            width: 200px;
+        }
+        .alarms-list button {
+            padding: 5px;
+            width: 80px;
+            border-radius: 5px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            color: #00ff00;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .alarms-list button:hover {
+            background-color: #00ff00;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="Terminal_header">
+        <a href="../Popup.html"><button class="Home"><h1><b>Home</b></h1></button></a>
+        <a href="CGS_terminal/Terminal.html"><button class="Terminal_iconbox"><h1><b>Upload File</b></h1></button></a>
+        <a href="Notepad_folder/Notepad.html"><button class="Notepad_iconbox"><h1><b>Save Script</b></h1></button></a>
+        <a href="Adblock_folder/Adblock.html"><button class="Adblocker_iconbox"><h1><b>Execute code</b></h1></button></a>
+    </div> 
+    <div class="Container">
+        <div class="apps-alarms-header">Apps and Alarms</div>
+        <div class="apps-controls">
+            <input type="text" id="app-name" placeholder="Enter app name">
+            <button id="add-app">Add App</button>
+            <div class="alarms-controls">
+            <input type="time" id="alarm-time">
+            <input type="text" id="alarm-label" placeholder="Enter alarm label">
+            <button id="set-alarm">Set Alarm</button>
+        </div>
+        <div class="alarms-list">
+            <h3>Alarms</h3>
+            <ul id="alarms">
+                <li>No alarms set</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cyber Guardian Security - System Monitor</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 350px;
+            width: 600px;
+            border: 3px solid #00ff00;
+            background-color: black;
+            background-image: url("Main_background.png");
+            background-size: cover;
+            position: relative;
+            top: 0%;
+            left: 0%;
+            transform: translate(-50, -50);
+        }
+        .Terminal_header {
+            height: 35px;
+            width: 585px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            display: flex;
+            flex-direction: horizontal;
+            background-size: cover;
+            position: absolute;
+            top: 2%;
+            left: 1%;
+            transform: translate(-50, -50);
+        }
+        .Terminal_header button {
+            margin: 2px;
+            padding: 4px;
+            height: 30px;
+            width: 142px;
+            border-radius: 2px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            text-align: center;
+            background-image: url("Buttonbackground.png");
+        }
+        .Terminal_header h1 {
+            margin: 2px;
+            color: #00ff00;
+            font-size: 15px;
+        }
+        .Terminal_header button:hover {
+            transform: scale(1.1);
+        }
+        .Container {
+            height: 290px;
+            width: 582px;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            background-color: black;
+            background-size: cover;
+            background-image: url("Textarea_background.png");
+            position: absolute;
+            top: 14%;
+            left: 1.2%;
+            transform: translate(-50, -50);
+            padding: 10px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .monitor-header {
+            font-size: 20px;
+            color: #00ff00;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .monitor-item {
+            margin-bottom: 20px;
+        }
+        .monitor-item h3 {
+            color: #00ff00;
+            margin-bottom: 5px;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #333;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 20px;
+            position: relative;
+        }
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            background-color: #00ff00;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .progress-text {
+            color: #00ff00;
+            text-align: right;
+            padding-right: 5px;
+            font-size: 14px;
+            position: relative;
+            top: -20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Terminal_header">
+        <a href="../Popup.html"><button class="Home"><h1><b>Home</b></h1></button></a>
+        <a href="CGS_terminal/Terminal.html"><button class="Terminal_iconbox"><h1><b>Upload File</b></h1></button></a>
+        <a href="Notepad_folder/Notepad.html"><button class="Notepad_iconbox"><h1><b>Save Script</b></h1></button></a>
+        <a href="Adblock_folder/Adblock.html"><button class="Adblocker_iconbox"><h1><b>Execute code</b></h1></button></a>
+    </div> 
+    <div class="Container">
+        <div class="monitor-header">System Monitor</div>
+        <div class="monitor-item">
+            <h3>CPU Usage</h3>
+            <div class="progress-bar">
+                <span id="cpu-usage-bar" style="width: 40%;"></span>
+                <div class="progress-text" id="cpu-usage-text">40%</div>
+            </div>
+        </div>
+        <div class="monitor-item">
+            <h3>Memory Usage</h3>
+            <div class="progress-bar">
+                <span id="memory-usage-bar" style="width: 70%;"></span>
+                <div class="progress-text" id="memory-usage-text">70%</div>
+            </div>
+        </div>
+        <div class="monitor-item">
+            <h3>Network Activity</h3>
+            <div class="progress-bar">
+                <span id="network-activity-bar" style="width: 50%;"></span>
+                <div class="progress-text" id="network-activity-text">50%</div>
+            </div>
+        </div>
+        <div class="monitor-item">
+            <h3>Disk Usage</h3>
+            <div class="progress-bar">
+                <span id="disk-usage-bar" style="width: 30%;"></span>
+                <div class="progress-text" id="disk-usage-text">30%</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // This is a placeholder. Actual implementation would gather real data
+        function updateSystemMetrics() {
+            // Simulate dynamic values
+            const cpuUsage = Math.floor(Math.random() * 100);
+            const memoryUsage = Math.floor(Math.random() * 100);
+            const networkActivity = Math.floor(Math.random() * 100);
+            const diskUsage = Math.floor(Math.random() * 100);
+
+            // Update CPU Usage
+            document.getElementById('cpu-usage-bar').style.width = cpuUsage + '%';
+            document.getElementById('cpu-usage-text').innerText = cpuUsage + '%';
+
+            // Update Memory Usage
+            document.getElementById('memory-usage-bar').style.width = memoryUsage + '%';
+            document.getElementById('memory-usage-text').innerText = memoryUsage + '%';
+
+            // Update Network Activity
+            document.getElementById('network-activity-bar').style.width = networkActivity + '%';
+            document.getElementById('network-activity-text').innerText = networkActivity + '%';
+
+            // Update Disk Usage
+            document.getElementById('disk-usage-bar').style.width = diskUsage + '%';
+            document.getElementById('disk-usage-text').innerText = diskUsage + '%';
+        }
+
+        setInterval(updateSystemMetrics, 2000); // Update every 2 seconds
+    </script>
+</body>
+</html>

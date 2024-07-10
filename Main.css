@@ -1,0 +1,188 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 350px;
+    width: 600px;
+    border: 3px solid #00ff00;
+    background-color: black;
+    background-image: url("Main_background.png");
+    background-size: cover;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50, -50);
+}
+.Main_container {
+    margin: 0px;
+    padding: 0px;
+    height: 280px;
+    width: 568px;
+    position: absolute;
+    top: 11%;
+    left: 2%;
+    transform: translate(-50, -50);
+}
+.Logo_container {
+    padding: 2px;
+    height: 25px;
+    width: 25px;
+    background-image: url("App_logo.svg");
+    background-size: cover;
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    transform: translate(-50, -50);
+    -webkit-transition: -webkit-transform 1s;
+}
+.Logo_container:hover{
+    -webkit-transform: rotate(360deg) translateZ(0);
+}
+.Container h3 {
+    font-size: 15px;
+    color: #00ff00;
+    position: absolute;
+    top: -1%;
+    left: 12%;
+    transform: translate(-50, -50);
+}
+.Container h3:hover{
+    transform: scale(1.1);
+}
+.carousel {
+    height: 170px;
+    width: 560px;
+    background-color: black;
+    border: 1px solid #00ff00;
+    z-index: 3;
+    Display: flex;
+    flex-direction: horizontal;
+    overflow-x: auto;
+    overflow-y: visible;
+    position: absolute;
+    top: 18%;
+    left: 1%;
+    transform: translate(-50, -50);
+}
+.carousel::-webkit-scrollbar{
+    background-color: black;
+    border: 2px solid #00ff00;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background-color: #00ff00;
+    border-radius: 15px;
+}
+.Searchbar {
+    margin: 0px;
+    padding: 0px;
+    height: 35px;
+    width: 556px;
+    background-color: black;
+    border: 3px solid #00ff00;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    transform: translate(-50, -50);
+}
+.Searchbar .Inputbar {
+    margin: 0px;
+    padding: 0px;
+    height: 19px;
+    width: 510px;
+    border-radius: 8px;
+    border: 1px solid #00ff00;
+    background-color: black;
+    color: #00ff00;
+    position: absolute;
+    top: 20%;
+    left: 1%;
+    transform: translate(-50, -50);
+}
+.Right_arrow {
+    height: 30px;
+    width: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(Right_arrow.png);
+    background-size: cover;
+    border: 0px;
+    position: absolute;
+    top: 1%;
+    left: 94%;
+    transform: translate(-50, -50);
+}
+.Right_arrow:hover {
+    transform: scale(1.1);
+}
+.carousel button:hover {
+    transform: scale(1.1);
+}
+.menusection button:hover {
+    transform: scale(1.1);
+}
+.carousel button {
+    margin: 5px;
+    padding: 0px;
+    height: 140px;
+    width: 200px;
+    background-image: url("Carousel_buttonbackground.png");
+    background-size: cover;
+    border-radius: 5px;
+    border: 3px solid #00ff00;
+    background-color: black;
+}
+.carousel div {
+    height: 100px;
+    width: 180px;
+    border: 1px solid #00ff00;
+    background-color: black;
+    position: relative;
+    top: -5%;
+    left: 3%;
+    transform: translate(-50, -50);
+}
+.carousel img {
+    height: 100px;
+    width: 100px;
+}
+.carousel h1 {
+    height: 17px;
+    width:180px;
+    color: #00ff00;
+    font-size: 13px;
+    font-style: none;
+    background-color: black;
+    border: 1px solid #00ff00;
+    position: relative;
+    top: -3%;
+    left: 3%;
+    transform: translate(-50, -50);
+}
+.menusection {
+    height: 35px;
+    width: 560px;
+    display: flex;
+    flex-direction: horizontal;
+    border-radius: 2px;
+    border: 1px solid #00ff00;
+    background-color: black;
+    position: absolute;
+    top: 87%;
+    left: 1%;
+    transform: translate(-50, -50);
+}
+.menusection button {
+    margin: 2px;
+    padding: 4px;
+    height: 30px;
+    width: 136px;
+    border-radius: 2px;
+    border: 1px solid #00ff00;
+    background-color: black;
+    text-align: center;
+    background-image: url("Buttonbackground.png");
+}
+.menusection h1 {
+    margin: 2px;
+    color: #00ff00;
+    font-size: 15px;
+}

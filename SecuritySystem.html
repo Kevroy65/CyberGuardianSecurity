@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="Stylesheet" href="Terminal.css">
+        <style>
+            .Container {
+              height: 290px;
+              width: 582px;
+              color: #00ff00;
+              border: 1px solid #00ff00;
+              background-color: black;
+              background-size: cover;
+              background-image: url("Textarea_background.png");
+              position: absolute;
+              top: 14%;
+              left: 1.2%;
+              transform: translate(-50, -50);
+            }
+
+            .Scanner {
+                margin: 5px;
+                width: 100%;
+                position: absolute;
+                top: 1%;
+                left: 0%;
+                transform: translate(-50, -50);
+            }
+
+            .loading-bar {
+                height: 20px;
+                width: 550px;
+                background-color: rgb(41, 41, 41);
+                border: 3px solid rgb(41, 41, 41);
+                border-radius: 5px;
+                position: absolute;
+                top: 40%;
+                left: 1.5%;
+                transform: translate(-50, -50);
+            }
+            .Progress {
+                height: 100%;
+                width: 40%;
+                border-radius: 5px;
+                background-color: #00ff00;
+            }
+            .Resolve {
+                width: 100px;
+                height: 30px;
+                color: black;
+                background-color: #00ff00;
+                border: none;
+                border-radius: 5px;
+                position: absolute;
+                top: 85%;
+                left: 43%;
+                transform: translate(-50, -50);
+            }
+        </style>
+        <title>
+            Cyber Guardian Security
+        </title>
+    </head>
+    <body>
+        <div class="Terminal_header">
+            <a href="../Popup.html"><button class="Home"><h1><b>Home</b></h1></button></a>
+            <a href="CGS_terminal/Terminal.html"><button class="Terminal_iconbox"><h1><b>Upload File</b></h1></button></a>
+            <a href="Notepad_folder/Notepad.html"><button class="Notepad_iconbox"><h1><b>Save Script</b></h1></button></a>
+            <a href="Adblock_folder/Adblock.html"><button class="Adblocker_iconbox"><h1><b>Execute code</b></h1></button></a>
+        </div>
+
+        <div class="Container">
+            <img class="Scanner" src="Scanner.svg" width="100%">
+            <div class="loading-bar">
+                <div class="Progress"></div>
+            </div>
+    
+            <button class="Resolve">Resolving...</button>
+        </div>
+    </body>
+</html>

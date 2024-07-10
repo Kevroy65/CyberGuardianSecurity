@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cyber Guardian Security</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 350px;
+            width: 600px;
+            border: 3px solid #00ff00;
+            background-color: black;
+            background-image: url("Main_background.png");
+            background-size: cover;
+            position: relative;
+            top: 0%;
+            left: 0%;
+            transform: translate(-50, -50);
+        }
+        .Terminal_header {
+            height: 35px;
+            width: 585px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            display: flex;
+            flex-direction: horizontal;
+            background-size: cover;
+            position: absolute;
+            top: 2%;
+            left: 1%;
+            transform: translate(-50, -50);
+        }
+        .Terminal_header button {
+            margin: 2px;
+            padding: 4px;
+            height: 30px;
+            width: 142px;
+            border-radius: 2px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            text-align: center;
+            background-image: url("Buttonbackground.png");
+        }
+        .Terminal_header h1 {
+            margin: 2px;
+            color: #00ff00;
+            font-size: 15px;
+        }
+        .Terminal_header button:hover {
+            transform: scale(1.1);
+        }
+        .Container {
+            height: 290px;
+            width: 582px;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            background-color: black;
+            background-size: cover;
+            background-image: url("Textarea_background.png");
+            position: absolute;
+            top: 14%;
+            left: 1.2%;
+            transform: translate(-50, -50);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .blocker-header {
+            font-size: 20px;
+            color: #00ff00;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .blocker-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .blocker-controls input {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            color: #00ff00;
+            font-size: 16px;
+        }
+        .blocker-controls button {
+            padding: 10px;
+            width: 120px;
+            border-radius: 5px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            color: #00ff00;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .blocker-controls button:hover {
+            background-color: #00ff00;
+            color: black;
+        }
+        .blocked-list {
+            text-align: center;
+            color: #00ff00;
+            font-size: 16px;
+        }
+        .blocked-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .blocked-list li {
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .blocked-list button {
+            padding: 5px;
+            width: 80px;
+            border-radius: 5px;
+            border: 1px solid #00ff00;
+            background-color: black;
+            color: #00ff00;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .blocked-list button:hover {
+            background-color: #00ff00;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="Terminal_header">
+        <a href="../Popup.html"><button class="Home"><h1><b>Home</b></h1></button></a>
+        <a href="CGS_terminal/Terminal.html"><button class="Terminal_iconbox"><h1><b>Upload File</b></h1></button></a>
+        <a href="Notepad_folder/Notepad.html"><button class="Notepad_iconbox"><h1><b>Save Script</b></h1></button></a>
+        <a href="Adblock_folder/Adblock.html"><button class="Adblocker_iconbox"><h1><b>Execute code</b></h1></button></a>
+    </div> 
+    <div class="Container">
+        <div class="blocker-header">Website Blocker</div>
+        <div class="blocker-controls">
+            <input type="text" id="block-url" placeholder="Enter website URL to block">
+            <button id="block-button">Block</button>
+        </div>
+        <div class="blocked-list">
+            <h3>Blocked Websites</h3>
+            <ul id="blocked-websites">
+                <li>No websites blocked</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
